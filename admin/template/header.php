@@ -107,14 +107,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="/admin/article/create"
+						<a href="../guru/tambahGuru.php"
 							class="nav-link <?= $sidebar == "Buat Guru" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
-							<p>Buat Guru</p>
+							<p>Tambah Guru</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="/admin/article" class="nav-link <?= $sidebar == "Semua Guru" ? 'active' : '' ?>">
+						<a href="../guru/guru.php" class="nav-link <?= $sidebar == "Semua Guru" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Guru</p>
 						</a>
