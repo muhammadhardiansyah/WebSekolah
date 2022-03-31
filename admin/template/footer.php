@@ -14,15 +14,15 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="../view/admin/plugins/jquery/jquery.min.js"></script>
+<script src="../../view/admin/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
-<script src="../view/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../view/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../view/admin/js/adminlte.min.js"></script>
+<script src="../../view/admin/js/adminlte.min.js"></script>
 
 <?php if($sidebar == 'Buat Berita') { ?>
 	<!-- Summernote -->
-	<script src="../view/admin/plugins/summernote/summernote-bs4.min.js"></script>
+	<script src="../../view/admin/plugins/summernote/summernote-bs4.min.js"></script>
 	<script>
 		$(function () {
 		// Summernote

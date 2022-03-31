@@ -12,15 +12,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <title>AdminLTE 3 | Starter</title>
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="../view/admin/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../../view/admin/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../view/admin/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../view/admin/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <?php if($sidebar == "Buat Berita") { ?>
-	<link rel="stylesheet" href="../view/admin/plugins/summernote/summernote-bs4.min.css">
+	<link rel="stylesheet" href="../../view/admin/plugins/summernote/summernote-bs4.min.css">
   <?php } ?>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -42,7 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="../view/admin/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../../view/admin/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">AdminLTE 3</span>
     </a>
@@ -52,10 +52,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../view/admin/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="../../view/admin/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin</a>
+          <a href="../../dashboard.php" class="d-block">Admin</a>
         </div>
       </div>
 
@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 			<li class="nav-header">ADMIN</li>
 			<li class="nav-item">
-				<a href="" class="nav-link <?= $sidebar == "Dashboard" ? 'active' : '' ?>">
+				<a href="../dashboard/dashboard.php" class="nav-link <?= $sidebar == "Dashboard" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Dashboard
@@ -155,14 +155,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="buat-berita.php"
+						<a href="../berita/buat-berita.php"
 							class="nav-link <?= $sidebar == "Buat Berita" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
 							<p>Buat Berita</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="berita.php" class="nav-link <?= $sidebar == "Semua Berita" ? 'active' : '' ?>">
+						<a href="../berita/berita.php" class="nav-link <?= $sidebar == "Semua Berita" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Berita</p>
 						</a>

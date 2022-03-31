@@ -1,6 +1,6 @@
 <?php 
 $sidebar = 'Dashboard';
-include_once('template/header.php');
+include_once('../template/header.php');
 
 ?>
   <div class="content-wrapper">
@@ -33,7 +33,7 @@ include_once('template/header.php');
               <div class="inner">
                 <h3>150</h3>
 
-                <p>New Orders</p>
+                <p>New Ord</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
@@ -107,5 +107,5 @@ include_once('template/header.php');
   </div>
 
 <?php 
-include_once('template/footer.php');
+include_once('../template/footer.php');
 ?>
