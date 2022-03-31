@@ -84,7 +84,7 @@ include_once('../template/header.php');
                                         <td><?= $item['penulis'];?></td>
                                         <?php echo "
                                         <td>
-                                        <a href='formEdit.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
+                                        <a href='editBerita.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
                                             <a href='delBerita.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
                                         </td>"; ?>
 
