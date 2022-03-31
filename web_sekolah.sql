@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2022 at 03:39 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.15
+-- Waktu pembuatan: 31 Mar 2022 pada 18.28
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `berita`
+-- Struktur dari tabel `berita`
 --
 
 CREATE TABLE `berita` (
@@ -36,10 +36,17 @@ CREATE TABLE `berita` (
   `penulis` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `berita`
+--
+
+INSERT INTO `berita` (`id_berita`, `judul`, `deskripsi`, `gambar`, `kategori`, `penulis`) VALUES
+(29, 'Permohonan Validasi KRS', '                                                                                                                                                                                                                                                                                                                                                                Permohonan Validasi KRS											\r\n																																																																																																			', '', 'Berita', 'Supri');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Struktur dari tabel `contact`
 --
 
 CREATE TABLE `contact` (
@@ -51,20 +58,28 @@ CREATE TABLE `contact` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `guru`
+-- Struktur dari tabel `guru`
 --
 
 CREATE TABLE `guru` (
-  `id_guru` varchar(255) NOT NULL,
+  `id_guru` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
-  `jabatan` varchar(255) DEFAULT NULL,
+  `id_jabatan` int(11) DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `guru`
+--
+
+INSERT INTO `guru` (`id_guru`, `nama`, `id_jabatan`, `gambar`) VALUES
+(7, 'Isyana Saras', 1, ''),
+(8, 'Muhammad hardiansyah', 1, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `home`
+-- Struktur dari tabel `home`
 --
 
 CREATE TABLE `home` (
@@ -76,7 +91,28 @@ CREATE TABLE `home` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `jabatan`
+--
+
+CREATE TABLE `jabatan` (
+  `id_jabatan` int(11) NOT NULL,
+  `jabatan` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jabatan`
+--
+
+INSERT INTO `jabatan` (`id_jabatan`, `jabatan`) VALUES
+(1, 'Guru Pertama'),
+(2, 'Guru Muda'),
+(3, 'Guru Madya'),
+(4, 'Guru Utama');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `slider`
 --
 
 CREATE TABLE `slider` (
@@ -89,7 +125,7 @@ CREATE TABLE `slider` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tenaga_kerja`
+-- Struktur dari tabel `tenaga_kerja`
 --
 
 CREATE TABLE `tenaga_kerja` (
@@ -102,7 +138,7 @@ CREATE TABLE `tenaga_kerja` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -114,7 +150,7 @@ CREATE TABLE `user` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `visi_misi`
+-- Struktur dari tabel `visi_misi`
 --
 
 CREATE TABLE `visi_misi` (
@@ -127,89 +163,107 @@ CREATE TABLE `visi_misi` (
 --
 
 --
--- Indexes for table `berita`
+-- Indeks untuk tabel `berita`
 --
 ALTER TABLE `berita`
   ADD PRIMARY KEY (`id_berita`);
 
 --
--- Indexes for table `contact`
+-- Indeks untuk tabel `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id_contact`);
 
 --
--- Indexes for table `guru`
+-- Indeks untuk tabel `guru`
 --
 ALTER TABLE `guru`
   ADD PRIMARY KEY (`id_guru`);
 
 --
--- Indexes for table `home`
+-- Indeks untuk tabel `home`
 --
 ALTER TABLE `home`
   ADD PRIMARY KEY (`id_home`);
 
 --
--- Indexes for table `slider`
+-- Indeks untuk tabel `jabatan`
+--
+ALTER TABLE `jabatan`
+  ADD PRIMARY KEY (`id_jabatan`);
+
+--
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
--- Indexes for table `tenaga_kerja`
+-- Indeks untuk tabel `tenaga_kerja`
 --
 ALTER TABLE `tenaga_kerja`
   ADD PRIMARY KEY (`id_tenaga_kerja`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `visi_misi`
+-- Indeks untuk tabel `visi_misi`
 --
 ALTER TABLE `visi_misi`
   ADD PRIMARY KEY (`id_visi_misi`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `berita`
+-- AUTO_INCREMENT untuk tabel `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT untuk tabel `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `home`
+-- AUTO_INCREMENT untuk tabel `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT untuk tabel `home`
 --
 ALTER TABLE `home`
   MODIFY `id_home` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tenaga_kerja`
+-- AUTO_INCREMENT untuk tabel `jabatan`
+--
+ALTER TABLE `jabatan`
+  MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT untuk tabel `tenaga_kerja`
 --
 ALTER TABLE `tenaga_kerja`
   MODIFY `id_tenaga_kerja` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `visi_misi`
+-- AUTO_INCREMENT untuk tabel `visi_misi`
 --
 ALTER TABLE `visi_misi`
   MODIFY `id_visi_misi` int(11) NOT NULL AUTO_INCREMENT;
