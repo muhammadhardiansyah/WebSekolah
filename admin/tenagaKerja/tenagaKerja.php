@@ -1,5 +1,5 @@
 <?php 
-$sidebar = 'Semua Berita';
+$sidebar = 'Tenaga Kerja';
 include_once('../template/header.php');
 
 ?>
@@ -10,12 +10,12 @@ include_once('../template/header.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Kelola Guru</h1>
+                    <h1 class="m-0">Kelola Tenaga Kerja</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard/dashboard.php">Admin</a></li>
-                        <li class="breadcrumb-item active">Kelola Guru</li>
+                        <li class="breadcrumb-item active">Kelola Tenaga Kerja</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -38,22 +38,22 @@ include_once('../template/header.php');
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center flex-row">
-                            <h5 class="mb-0">Data Guru</h5>
-                            <a class="btn btn-sm btn-primary mr-0 ml-auto" href="tambahGuru.php"><i
-                                class="fa fa-plus"></i> Tambah Data Guru</a>
+                            <h5 class="mb-0">Tenaga Kerja</h5>
+                            <a class="btn btn-sm btn-primary mr-0 ml-auto" href="tambahTenagaKerja.php"><i
+                                class="fa fa-plus"></i> Tambah Tenaga Kerja</a>
                         </div>
                         <div class="card-body">
                             <table class="table">
                                 <thead class="thead-light text-center">
                                     <th>No</th>
                                     <th>Nama</th>
-                                    <th>Jabatan</th>
+                                    <th>Tenaga Kerja</th>
                                     <th>Gambar</th>
                                     <th>Aksi</th>
                                 </th>
                                 <?php 
                                 include "../../functions/db.php";
-                                include "../../functions/guru.php";
+                                include "../../functions/tenaga_kerja.php";
 
                                 // if(isset($_POST['hapus'])){
                                 //     $id_guru = $_GET['id_guru'];
@@ -69,18 +69,18 @@ include_once('../template/header.php');
                                 ?>
                                 <tbody class="text-center">
                                 <?php    
-                                    $query = mysqli_query($koneksi,get_guru());
+                                    $query = mysqli_query($koneksi,get_tenaga_kerja());
                                     $i = 1;
                                     while ($item = mysqli_fetch_array($query)) { ?>
                                     <tr>
                                         <td class="font-weight-bold"><?= $i ?></td>
                                         <td><?= $item['nama']; ?></td>
-                                        <td><?= $item['jabatan'];?></td>
+                                        <td><?= $item['tenaga_kerja'];?></td>
                                         <td><?= $item['gambar'];?></td>
                                         <?php echo "
                                         <td>
-                                            <a href='editGuru.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
-                                            <a href='delGuru.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
+                                            <a href='editTenagaKerja.php?id_tenaga_kerja=$item[id_tenaga_kerja]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
+                                            <a href='delTenagaKerja.php?id_tenaga_kerja=$item[id_tenaga_kerja]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
                                         </td>"; ?>
 
 

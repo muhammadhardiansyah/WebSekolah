@@ -131,14 +131,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="/admin/article/create"
+						<a href="../tenagaKerja/tambahTenagaKerja.php"
 							class="nav-link <?= $sidebar == "Buat Tenaga Kerja" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
 							<p>Buat Tenaga Kerja</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="/admin/article" class="nav-link <?= $sidebar == "Semua Tenaga Kerja" ? 'active' : '' ?>">
+						<a href="../tenagaKerja/tenagaKerja.php" class="nav-link <?= $sidebar == "Semua Tenaga Kerja" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Tenaga Kerja</p>
 						</a>

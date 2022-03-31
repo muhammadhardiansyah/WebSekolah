@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Mar 2022 pada 18.28
+-- Waktu pembuatan: 31 Mar 2022 pada 19.24
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -74,7 +74,7 @@ CREATE TABLE `guru` (
 
 INSERT INTO `guru` (`id_guru`, `nama`, `id_jabatan`, `gambar`) VALUES
 (7, 'Isyana Saras', 1, ''),
-(8, 'Muhammad hardiansyah', 1, '');
+(9, 'Supriyat', 1, '');
 
 -- --------------------------------------------------------
 
@@ -112,6 +112,28 @@ INSERT INTO `jabatan` (`id_jabatan`, `jabatan`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `jabatan_tenaga`
+--
+
+CREATE TABLE `jabatan_tenaga` (
+  `id_tenaga` int(11) NOT NULL,
+  `tenaga_kerja` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `jabatan_tenaga`
+--
+
+INSERT INTO `jabatan_tenaga` (`id_tenaga`, `tenaga_kerja`) VALUES
+(1, 'Tata Usaha'),
+(2, 'IT'),
+(3, 'Penjaga Lab'),
+(4, 'Satpam'),
+(5, 'Petugas Kebersihan');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `slider`
 --
 
@@ -131,9 +153,17 @@ CREATE TABLE `slider` (
 CREATE TABLE `tenaga_kerja` (
   `id_tenaga_kerja` int(11) NOT NULL,
   `nama` varchar(255) DEFAULT NULL,
-  `jabatan` varchar(255) DEFAULT NULL,
+  `id_tenaga` int(11) NOT NULL,
   `gambar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tenaga_kerja`
+--
+
+INSERT INTO `tenaga_kerja` (`id_tenaga_kerja`, `nama`, `id_tenaga`, `gambar`) VALUES
+(8, 'Muhammad hardiansyah', 2, ''),
+(9, 'Isyana Saras', 2, '');
 
 -- --------------------------------------------------------
 
@@ -193,6 +223,12 @@ ALTER TABLE `jabatan`
   ADD PRIMARY KEY (`id_jabatan`);
 
 --
+-- Indeks untuk tabel `jabatan_tenaga`
+--
+ALTER TABLE `jabatan_tenaga`
+  ADD PRIMARY KEY (`id_tenaga`);
+
+--
 -- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
@@ -236,7 +272,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT untuk tabel `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `home`
@@ -251,10 +287,16 @@ ALTER TABLE `jabatan`
   MODIFY `id_jabatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT untuk tabel `jabatan_tenaga`
+--
+ALTER TABLE `jabatan_tenaga`
+  MODIFY `id_tenaga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT untuk tabel `tenaga_kerja`
 --
 ALTER TABLE `tenaga_kerja`
-  MODIFY `id_tenaga_kerja` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tenaga_kerja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
