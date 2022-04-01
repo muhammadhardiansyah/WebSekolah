@@ -8,10 +8,15 @@
 		return run($query);
 	}
 	function del_berita($id_berita){
-		$result = "DELETE FROM berita WHERE id_berita= $id_berita";
-		return run($result);
+		$query = "DELETE FROM berita WHERE id_berita= $id_berita";
+		return run($query);
 	}
 	function edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita){
 		$query = "UPDATE berita SET judul='$judul', deskripsi = '$deskripsi', gambar = '$gambar', kategori = '$kategori', penulis = '$penulis' WHERE id_berita = $id_berita";
 		return run($query);
 	}
+	function show_berita($id_berita){
+		$query = "SELECT * FROM berita WHERE id_berita = $id_berita";
+		return result($query);
+	}
+	

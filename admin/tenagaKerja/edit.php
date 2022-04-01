@@ -1,8 +1,7 @@
 <?php 
 $sidebar = 'Edit Guru';
+include('../../core/init.php');
 include_once('../template/header.php');
-include("../../functions/db.php");
-include("../../functions/tenaga_kerja.php");
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -13,11 +12,11 @@ include("../../functions/tenaga_kerja.php");
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Edit Data Tenaga Kerja</h1>
-                    <a href="tenagaKerja.php" class="btn btn-light btn-sm"><i class="fa fa-chevron-left mr-1"></i> Kembali</a>
+                    <a href="index.php" class="btn btn-light btn-sm"><i class="fa fa-chevron-left mr-1"></i> Kembali</a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="../dashboard/dashboard.php">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="../dashboard/">Admin</a></li>
                         <li class="breadcrumb-item active">Edit Data Tenaga Kerja</li>
                     </ol>
                 </div><!-- /.col -->
@@ -39,10 +38,10 @@ if (isset($_POST['update'])){
     $gambar = $_POST["gambar"];
     // echo "$id_berita,$judul,$deskripsi,$kategori,$penulis";
     //update data
-    $result = mysqli_query($koneksi, "UPDATE tenaga_kerja SET nama='$nama', id_tenaga = '$id_tenaga', gambar = '$gambar' WHERE id_tenaga_kerja = $id_tenaga_kerja");
+    $result = update_tenaga_kerja($nama,$id_tenaga,$gambar,$id_tenaga_kerja);
     
     echo "
-    <script type='text/javascript'>location.href = 'tenagaKerja.php';</script>
+    <script type='text/javascript'>location.href = 'index.php';</script>
     ";
 //     // echo "$judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita";
     
@@ -58,12 +57,12 @@ if(isset($_GET['id_tenaga_kerja'])){
 else{
     //redirect kembali ke halaman utama
     echo "
-    <script type='text/javascript'>location.href = 'tenagaKerja.php';</script>
+    <script type='text/javascript'>location.href = 'index.php';</script>
     ";
 }
 
 //fetch user data
-$query = mysqli_query($koneksi, "SELECT * FROM tenaga_kerja INNER JOIN jabatan_tenaga ON tenaga_kerja.id_tenaga = jabatan_tenaga.id_tenaga AND id_tenaga_kerja = $id_tenaga_kerja");
+$query = show_tenaga_kerja($id_tenaga_kerja);
 
 while ($item = mysqli_fetch_array($query)){
     $nama = $item["nama"];
@@ -80,7 +79,7 @@ while ($item = mysqli_fetch_array($query)){
                         </div>
 
                         <div class="card-body">
-                            <form action="editTenagaKerja.php" method="POST">
+                            <form action="edit.php" method="POST">
                                 <input type="hidden" name="id_tenaga_kerja" value="<?= $id_guru ?>">
                                     <div class="form-row">
                                         <input type="hidden" id="id_berita" name="id_tenaga_kerja" value="<?= $id_tenaga_kerja ?>">
@@ -94,7 +93,7 @@ while ($item = mysqli_fetch_array($query)){
                                             <select name="id_tenaga" class="custom-select" id="inputGroupSelect02" required>
                                                 <option value="<?= $id_tenaga ?>" selected><?= $tenaga_kerja; ?></option>
                                                 <?php 
-                                                $dbTenaga = mysqli_query($koneksi, "SELECT * FROM jabatan_tenaga ORDER BY id_tenaga asc");  
+                                                $dbTenaga = mysqli_query($link, "SELECT * FROM jabatan_tenaga ORDER BY id_tenaga asc");  
                                                 while ($item = mysqli_fetch_array($dbTenaga)){
                                                     if ($id_tenaga != $item['id_tenaga']){
                                                 ?>

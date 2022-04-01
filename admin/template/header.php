@@ -19,9 +19,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../../view/admin/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-  <?php if($sidebar == "Buat Berita") { ?>
-	<link rel="stylesheet" href="../../view/admin/plugins/summernote/summernote-bs4.min.css">
-  <?php } ?>
+  
+  <link rel="stylesheet" href="../../view/admin/plugins/summernote/summernote-bs4.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -66,7 +66,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                with font-awesome or any other icon font library -->
 			<li class="nav-header">ADMIN</li>
 			<li class="nav-item">
-				<a href="../dashboard/dashboard.php" class="nav-link <?= $sidebar == "Dashboard" ? 'active' : '' ?>">
+				<a href="../dashboard/" class="nav-link <?= $sidebar == "Dashboard" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Dashboard
@@ -74,7 +74,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li> 
 			<li class="nav-item">
-				<a href="" class="nav-link <?= $sidebar == "Home" ? 'active' : '' ?>">
+				<a href="../home/edit.php" class="nav-link <?= $sidebar == "Home" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Home
@@ -82,7 +82,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li> 
 			<li class="nav-item">
-				<a href="" class="nav-link <?= $sidebar == "Slider" ? 'active' : '' ?>">
+				<a href="../slider/" class="nav-link <?= $sidebar == "Slider" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Slider
@@ -90,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link <?= $sidebar == "Visi dan Misi" ? 'active' : '' ?>">
+				<a href="../visi-misi/edit.php" class="nav-link <?= $sidebar == "Visi dan Misi" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Visi dan Misi
@@ -107,14 +107,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="../guru/tambahGuru.php"
+						<a href="../guru/add.php"
 							class="nav-link <?= $sidebar == "Buat Guru" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
 							<p>Tambah Guru</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="../guru/guru.php" class="nav-link <?= $sidebar == "Semua Guru" ? 'active' : '' ?>">
+						<a href="../guru/" class="nav-link <?= $sidebar == "Semua Guru" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Guru</p>
 						</a>
@@ -131,14 +131,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="../tenagaKerja/tambahTenagaKerja.php"
+						<a href="../tenagaKerja/add.php"
 							class="nav-link <?= $sidebar == "Buat Tenaga Kerja" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
 							<p>Buat Tenaga Kerja</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="../tenagaKerja/tenagaKerja.php" class="nav-link <?= $sidebar == "Semua Tenaga Kerja" ? 'active' : '' ?>">
+						<a href="../tenagaKerja/" class="nav-link <?= $sidebar == "Semua Tenaga Kerja" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Tenaga Kerja</p>
 						</a>
@@ -155,14 +155,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 				<ul class="nav nav-treeview">
 					<li class="nav-item">
-						<a href="../berita/buat-berita.php"
+						<a href="../berita/add.php"
 							class="nav-link <?= $sidebar == "Buat Berita" ? 'active' : '' ?>">
 							<i class="fa fa-plus nav-icon"></i>
 							<p>Buat Berita</p>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a href="../berita/berita.php" class="nav-link <?= $sidebar == "Semua Berita" ? 'active' : '' ?>">
+						<a href="../berita/" class="nav-link <?= $sidebar == "Semua Berita" ? 'active' : '' ?>">
 							<i class="fa fa-list nav-icon"></i>
 							<p>Semua Berita</p>
 						</a>
@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a href="../contact/contact.php" class="nav-link <?= $sidebar == "" ? 'active' : '' ?>">
+				<a href="../contact/edit.php" class="nav-link <?= $sidebar == "" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Contact

@@ -20,7 +20,7 @@
 <!-- AdminLTE App -->
 <script src="../../view/admin/js/adminlte.min.js"></script>
 
-<?php if($sidebar == 'Buat Berita') { ?>
+
 	<!-- Summernote -->
 	<script src="../../view/admin/plugins/summernote/summernote-bs4.min.js"></script>
 	<script>
@@ -43,6 +43,6 @@
 	})
 	</script>
 
-<?php } ?>
+
 </body>
 </html>

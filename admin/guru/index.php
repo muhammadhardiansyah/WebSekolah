@@ -1,5 +1,6 @@
 <?php 
 $sidebar = 'Semua Berita';
+include("../../core/init.php");
 include_once('../template/header.php');
 
 ?>
@@ -10,23 +11,15 @@ include_once('../template/header.php');
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Kelola Berita</h1>
+                    <h1 class="m-0">Kelola Guru</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="../dashboard/dashboard.php">Admin</a></li>
-                        <li class="breadcrumb-item active">Kelola Berita</li>
+                        <li class="breadcrumb-item"><a href="../dashboard/">Admin</a></li>
+                        <li class="breadcrumb-item active">Kelola Guru</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-            <!-- @if(Session::has('sukses'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Sukses!</strong> {{ session('sukses') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif -->
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -38,54 +31,42 @@ include_once('../template/header.php');
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header d-flex justify-content-between align-items-center flex-row">
-                            <h5 class="mb-0">Berita</h5>
-                            <a class="btn btn-sm btn-primary mr-0 ml-auto" href="buat-berita.php"><i
-                                class="fa fa-plus"></i> Tambah Berita Baru</a>
+                            <h5 class="mb-0">Data Guru</h5>
+                            <a class="btn btn-sm btn-primary mr-0 ml-auto" href="add.php"><i
+                                class="fa fa-plus"></i> Tambah Data Guru</a>
                         </div>
                         <div class="card-body">
                             <table class="table">
                                 <thead class="thead-light text-center">
                                     <th>No</th>
-                                    <th>Judul</th>
-                                    <th>Deskripsi</th>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
                                     <th>Gambar</th>
-                                    <th>Kategori</th>
-                                    <th>Penulis</th>
                                     <th>Aksi</th>
                                 </th>
                                 <?php 
-                                include "../../functions/db.php";
-                                include "../../functions/berita.php";
-
-                                if(isset($_POST['hapus'])){
-                                    $id_berita = $_GET['id_berita'];
-                                    $delete = mysqli_query($koneksi, del_berita($id_berita));
-                                    echo "
+                                if(isset($_GET['success'])){ ?>
                                     <br>
                                     <div class='alert alert-success alert-dismissible'>
                                     <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                                    Berita berhasil dihapus.
-                                    </div> ";
+                                    <?= $_GET['success'] ?>
+                                    </div>
                                    
-                                }
-                                ?>
+                                <?php } ?>
                                 <tbody class="text-center">
                                 <?php    
-                                    $query = mysqli_query($koneksi,get_berita());
+                                    $query = get_guru();
                                     $i = 1;
                                     while ($item = mysqli_fetch_array($query)) { ?>
                                     <tr>
                                         <td class="font-weight-bold"><?= $i ?></td>
-                                        
-                                        <td><?= $item['judul']; ?></td>
-                                        <td><?= $item['deskripsi'];?></td>
+                                        <td><?= $item['nama']; ?></td>
+                                        <td><?= $item['jabatan'];?></td>
                                         <td><?= $item['gambar'];?></td>
-                                        <td><?= $item['kategori'];?></td>
-                                        <td><?= $item['penulis'];?></td>
                                         <?php echo "
                                         <td>
-                                        <a href='editBerita.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
-                                            <a href='delBerita.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
+                                            <a href='edit.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
+                                            <a href='delete.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
                                         </td>"; ?>
 
 

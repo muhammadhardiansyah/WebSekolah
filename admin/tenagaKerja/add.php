@@ -1,5 +1,6 @@
 <?php 
 $sidebar = 'Tambah Tenaga Kerja';
+include('../../core/init.php');
 include_once('../template/header.php');
 
 ?>
@@ -11,11 +12,11 @@ include_once('../template/header.php');
             <div class="row mb-2">
                 <div class="col-sm-6">
                     <h1 class="m-0">Tambah Data Tenaga Kerja</h1>
-                    <a href="tenagaKerja.php"></i> Kembali</a>
+                    <a href="index.php" class="btn btn-light btn-sm"><i class="fa fa-chevron-left mr-1"></i> Kembali</a>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="../dashboard/dashboard.php">Admin</a></li>
+                        <li class="breadcrumb-item"><a href="../dashboard/">Admin</a></li>
                         <li class="breadcrumb-item active">Tambah Data Tenaga Kerja</li>
                     </ol>
                 </div><!-- /.col -->
@@ -27,19 +28,17 @@ include_once('../template/header.php');
     <!-- Main content -->
     <div class="content">
         <div class="container-fluid">
-        <?php
-include "../../functions/db.php";
-include "../../functions/tenaga_kerja.php";
+<?php
 if(isset($_POST['tambah'])){
     $nama = $_POST['nama'];
     $id_tenaga = $_POST ['id_tenaga'];
     $gambar = $_POST['gambar'];
-    $add = mysqli_query($koneksi, add_tenaga_kerja($nama,$id_tenaga,$gambar));
+    $add = add_tenaga_kerja($nama,$id_tenaga,$gambar);
     echo "
     <br>
     <div class='alert alert-success alert-dismissible'>
     <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-    Data tenaga kerja berhasil ditambahkan. <a href='tenagaKerja.php'>Lihat Daftar Tenaga Kerja</a> 
+    Data tenaga kerja berhasil ditambahkan. <a href='index.php'>Lihat Daftar Tenaga Kerja</a> 
     </div> ";
    
 }
@@ -52,7 +51,7 @@ if(isset($_POST['tambah'])){
                         </div>
 
                         <div class="card-body">
-                            <form action="tambahTenagaKerja.php" method="POST">
+                            <form action="add.php" method="POST">
                                     <div class="form-row">
 
                                         <div class="form-group col-md-12">
@@ -65,7 +64,7 @@ if(isset($_POST['tambah'])){
                                             <select name="id_tenaga" class="custom-select" id="inputGroupSelect02" required>
                                                 <option value="" selected>Choose..</option>
                                             <?php 
-                                                $dbTenaga = mysqli_query($koneksi, "SELECT * FROM jabatan_tenaga ORDER BY id_tenaga asc");  
+                                                $dbTenaga = mysqli_query($link, "SELECT * FROM jabatan_tenaga ORDER BY id_tenaga asc");  
                                                 while ($item = mysqli_fetch_array($dbTenaga)){
                                                 ?>
                                                 <option value="<?= $item['id_tenaga']; ?>"><?= $item['tenaga_kerja']; ?></option>
