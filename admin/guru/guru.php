@@ -1,5 +1,6 @@
 <?php 
 $sidebar = 'Semua Berita';
+require_once('../../core/init.php');
 include_once('../template/header.php');
 
 ?>
@@ -19,14 +20,6 @@ include_once('../template/header.php');
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
-            <!-- @if(Session::has('sukses'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>Sukses!</strong> {{ session('sukses') }}
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            @endif -->
         </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
@@ -51,80 +44,24 @@ include_once('../template/header.php');
                                     <th>Gambar</th>
                                     <th>Aksi</th>
                                 </th>
-                                <?php 
-                                include "../../functions/db.php";
-                                include "../../functions/guru.php";
-
-                                // if(isset($_POST['hapus'])){
-                                //     $id_guru = $_GET['id_guru'];
-                                //     $delete = mysqli_query($koneksi, del_berita($id_guru));
-                                //     echo "
-                                //     <br>
-                                //     <div class='alert alert-success alert-dismissible'>
-                                //     <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-                                //     Data guru berhasil dihapus.
-                                //     </div> ";
-                                   
-                                // }
-                                ?>
                                 <tbody class="text-center">
                                 <?php    
-                                    $query = mysqli_query($koneksi,get_guru());
                                     $i = 1;
+                                    $query = get_guru();
                                     while ($item = mysqli_fetch_array($query)) { ?>
                                     <tr>
                                         <td class="font-weight-bold"><?= $i ?></td>
                                         <td><?= $item['nama']; ?></td>
                                         <td><?= $item['jabatan'];?></td>
                                         <td><?= $item['gambar'];?></td>
-                                        <?php echo "
                                         <td>
-                                            <a href='editGuru.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
-                                            <a href='delGuru.php?id_guru=$item[id_guru]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
-                                        </td>"; ?>
-
-
-
-                                        <!-- <td>
-                                            <a href='edit.php?id_berita=$item[id_berita]'><button type='button' class='btn btn-sm btn-info my-1'><i class="fa fa-pen"></i></button></a>
-                                            <a href='berita.php?id_berita=$item[id_berita]'><button type='button' name="hapus" class='btn btn-sm btn-danger my-1' onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"><i class="fa fa-trash"></i></button></a>
-                                        </td> -->
-
-
-
-                                        <!-- <td>
-                                            
-                                            <a href="{{ route('admin.pegawai.edit', $item->id) }}" class="btn btn-sm btn-info my-1" title="Edit Data">
-                                                <i class="fa fa-pen"></i>
-                                            </a>
-                                            <form action="{{ route('admin.pegawai.destroy', $item->id) }}" method="POST" class="d-inline-block">
-                                                <button class="btn btn-sm btn-danger my-1" title="Hapus Data" type="submit" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </td> -->
+                                            <a href='editGuru.php?id_guru=<?= $item['id_guru']; ?>'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
+                                            <a href='delGuru.php?id_guru=<?= $item['id_guru']; ?>'><button type='button' class='btn btn-sm btn-danger my-1' onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"><i class='fa fa-trash'></i></button></a>
+                                        </td>
                                     </tr>
                                     <?php 
                                         $i += 1;
                                     } ?>
-                                    <!-- <tr>
-                                        <td class="font-weight-bold">1</td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>asd</td>
-                                        <td>
-                                            <a href="{{ route('admin.pegawai.edit', $item->id) }}" class="btn btn-sm btn-info my-1" title="Edit Data">
-                                                <i class="fa fa-pen"></i>
-                                            </a>
-                                            <form action="{{ route('admin.pegawai.destroy', $item->id) }}" method="POST" class="d-inline-block">
-                                                <button class="btn btn-sm btn-danger my-1" title="Hapus Data" type="submit" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')">
-                                                    <i class="fa fa-trash"></i>
-                                                </button>
-                                            </form>
-                                        </td>
-                                    </tr> -->
                                 </tbody>
                             </table>
                         </div>

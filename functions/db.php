@@ -5,9 +5,9 @@
 	$pass = '';
 	$db   = 'web_sekolah';
 
-	$koneksi = mysqli_connect($host, $user, $pass, $db);
+	$link = mysqli_connect($host, $user, $pass, $db);
 
-if (!$koneksi){
-    die("KOneksi gagal ". mysqli_connect_error());
+if (!$link){
+    die("Koneksi gagal ". mysqli_connect_error());
 }
  ?>
