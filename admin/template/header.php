@@ -170,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a href="" class="nav-link <?= $sidebar == "" ? 'active' : '' ?>">
+				<a href="../contact/contact.php" class="nav-link <?= $sidebar == "" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Contact
