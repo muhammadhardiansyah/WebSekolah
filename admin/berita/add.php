@@ -31,7 +31,7 @@ include_once('../template/header.php');
 if(isset($_POST['tambah'])){
     $judul = $_POST['judul'];
     $deskripsi = $_POST ['deskripsi'];
-    $gambar = $_POST['gambar'];
+    // $gambar = $_POST['gambar'];
     $kategori = $_POST['kategori'];
     $penulis = $_POST['penulis'];
 
@@ -53,7 +53,7 @@ if(isset($_POST['tambah'])){
                         </div>
 
                         <div class="card-body">
-                            <form action="add.php" method="POST">
+                            <form action="add.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-row">
 
                                         <div class="form-group col-md-12">

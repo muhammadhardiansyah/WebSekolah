@@ -37,7 +37,7 @@ if (isset($_POST['update'])){
     $urutan = $_POST['urutan'];
     $judul = $_POST['judul'];
     $deskripsi = $_POST["deskripsi"];
-    $gambar = $_POST['gambar'];
+    // $gambar = $_POST['gambar'];
     $result = update_slider($urutan ,$judul, $deskripsi, $gambar, $id_slider);
     echo "
     <script type='text/javascript'>location.href = 'index.php?success=Slider berhasil di Update';</script>
@@ -78,7 +78,7 @@ while ($item = mysqli_fetch_array($query)){
                         </div>
 
                         <div class="card-body">
-                            <form action="edit.php" method="POST">
+                            <form action="edit.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-row">
    
                                         <div class="form-group col-md-12">

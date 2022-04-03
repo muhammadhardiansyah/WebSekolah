@@ -35,7 +35,7 @@ if (isset($_POST['update'])){
     $id_tenaga_kerja = $_POST['id_tenaga_kerja'];
     $nama = $_POST["nama"];
     $id_tenaga = $_POST["id_tenaga"];
-    $gambar = $_POST["gambar"];
+    // $gambar = $_POST["gambar"];
     // echo "$id_berita,$judul,$deskripsi,$kategori,$penulis";
     //update data
     $result = update_tenaga_kerja($nama,$id_tenaga,$gambar,$id_tenaga_kerja);
@@ -79,7 +79,7 @@ while ($item = mysqli_fetch_array($query)){
                         </div>
 
                         <div class="card-body">
-                            <form action="edit.php" method="POST">
+                            <form action="edit.php" method="POST" enctype="multipart/form-data">
                                 <input type="hidden" name="id_tenaga_kerja" value="<?= $id_guru ?>">
                                     <div class="form-row">
                                         <input type="hidden" id="id_berita" name="id_tenaga_kerja" value="<?= $id_tenaga_kerja ?>">

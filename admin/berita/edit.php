@@ -36,15 +36,15 @@ if (isset($_POST['update'])){
     $id_berita = $_POST['id_berita'];
     $judul = $_POST["judul"];
     $deskripsi = $_POST["deskripsi"];
-    $gambar = $_POST["gambar"];
+    // $gambar = $_POST["gambar"];
     $kategori = $_POST["kategori"];
     $penulis = $_POST['penulis']; 
     
     $result = edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita);
     
-    echo "
-    <script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>
-    ";
+    // echo "
+    // <script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>
+    // ";
     
 }
 ?>
@@ -57,9 +57,9 @@ if(isset($_GET['id_berita'])){
 }
 else{
     //redirect kembali ke halaman utama
-    echo "
-    <script type='text/javascript'>location.href = 'index.php';</script>
-    ";
+    // echo "
+    // <script type='text/javascript'>location.href = 'index.php';</script>
+    // ";
 }
 
 //fetch user data
@@ -81,7 +81,7 @@ while ($item = mysqli_fetch_array($query)){
                         </div>
 
                         <div class="card-body">
-                            <form action="edit.php" method="POST">
+                            <form action="edit.php" method="POST" enctype="multipart/form-data">
                                     <div class="form-row">
                                         <input type="hidden" id="id_berita" name="id_berita" value="<?= $id_berita ?>">
                                         <div class="form-group col-md-12">
