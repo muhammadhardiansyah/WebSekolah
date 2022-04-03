@@ -62,7 +62,7 @@ include_once('../template/header.php');
                                         <td class="font-weight-bold"><?= $i ?></td>
                                         <td><?= $item['nama']; ?></td>
                                         <td><?= $item['tenaga_kerja'];?></td>
-                                        <td><?= $item['gambar'];?></td>
+                                        <td><img src="../..<?= $item['gambar'];?>" width="100" alt=""></td>
                                         <?php echo "
                                         <td>
                                             <a href='edit.php?id_tenaga_kerja=$item[id_tenaga_kerja]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>

@@ -35,6 +35,11 @@ if (isset($_POST['update'])){
     $id_tenaga_kerja = $_POST['id_tenaga_kerja'];
     $nama = $_POST["nama"];
     $id_tenaga = $_POST["id_tenaga"];
+
+	$gambar = '/view/default.png';
+	if (isset($_FILES['gambar'])){
+		$gambar = uploadImage();
+	}
     // $gambar = $_POST["gambar"];
     // echo "$id_berita,$judul,$deskripsi,$kategori,$penulis";
     //update data
