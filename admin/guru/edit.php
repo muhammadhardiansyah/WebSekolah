@@ -1,5 +1,5 @@
 <?php 
-$sidebar = 'Edit Guru';
+$sidebar = 'BUat Guru';
 include ('../../core/init.php');
 include_once('../template/header.php');
 ?>
@@ -40,7 +40,7 @@ if (isset($_POST['update'])){
     $result = update_guru($nama,$jabatan,$gambar,$id_guru);
     
     echo "
-    <script type='text/javascript'>location.href = 'index.php';</script>
+    <script type='text/javascript'>location.href = 'index.php?success=Data Guru Berhasil di Update';</script>
     ";
 //     // echo "$judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita";
     
@@ -56,7 +56,7 @@ if(isset($_GET['id_guru'])){
 else{
     //redirect kembali ke halaman utama
     echo "
-    <script type='text/javascript'>location.href = 'index.php';</script>
+    <script type='text/javascript'>location.href = 'index.php?';</script>
     ";
 }
 

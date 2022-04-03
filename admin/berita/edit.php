@@ -1,5 +1,5 @@
 <?php 
-$sidebar = 'Edit Berita';
+$sidebar = 'Buat Berita';
 include("../../core/init.php");
 include_once('../template/header.php');
 
@@ -43,7 +43,7 @@ if (isset($_POST['update'])){
     $result = edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita);
     
     echo "
-    <script type='text/javascript'>location.href = 'index.php';</script>
+    <script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>
     ";
     
 }
@@ -92,7 +92,7 @@ while ($item = mysqli_fetch_array($query)){
                                         
                                         <div class="form-group col-md-12">
                                             <label for="summernote">Deskripsi</label>
-											<textarea required id="summernote" name="deskripsi">
+											<textarea required class="summernote" name="deskripsi">
                                                 <?= $deskripsi; ?>
                                             </textarea>         
 										</div>

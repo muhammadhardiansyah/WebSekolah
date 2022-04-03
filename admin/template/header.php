@@ -1,3 +1,11 @@
+<?php
+if(!isset($_SESSION)){
+	session_start();
+}
+if (!isset($_SESSION['id_user'])){
+    echo "<script type='text/javascript'>location.href = '../';</script>";
+}
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -82,7 +90,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li> 
 			<li class="nav-item">
-				<a href="../slider/" class="nav-link <?= $sidebar == "Slider" ? 'active' : '' ?>">
+				<a href="../slider/" class="nav-link <?= $sidebar == "slider" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Slider
@@ -90,7 +98,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li>
 			<li class="nav-item">
-				<a href="../visi-misi/edit.php" class="nav-link <?= $sidebar == "Visi dan Misi" ? 'active' : '' ?>">
+				<a href="../visi-misi/edit.php" class="nav-link <?= $sidebar == "Visi Misi" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Visi dan Misi
@@ -122,7 +130,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</ul>
 			</li>
 			<li class="nav-item has-treeview <?= strpos($sidebar, "Tenaga Kerja") !== false ? 'menu-open' : '' ?>">
-				<a href="#" class="nav-link <?= strpos($sidebar, "Tenaga Kerja !== false") ? 'active' : '' ?>">
+				<a href="#" class="nav-link <?= strpos($sidebar, "Tenaga Kerja") !== false ? 'active' : '' ?>">
 					<i class="nav-icon fa fa-envelope"></i>
 					<p>
 						Tenaga Kerja
@@ -170,7 +178,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</ul>
 			</li>
 			<li class="nav-item">
-				<a href="../contact/edit.php" class="nav-link <?= $sidebar == "" ? 'active' : '' ?>">
+				<a href="../contact/edit.php" class="nav-link <?= $sidebar == "Edit Contact" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-tachometer-alt"></i>
 					<p>
 						Contact

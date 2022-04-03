@@ -1,5 +1,5 @@
 <?php 
-$sidebar = 'Tambah Guru';
+$sidebar = 'Buat Guru';
 include('../../core/init.php');
 include_once('../template/header.php');
 

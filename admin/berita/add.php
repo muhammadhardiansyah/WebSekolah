@@ -63,7 +63,7 @@ if(isset($_POST['tambah'])){
 
                                         <div class="form-group col-md-12">
 											<label for="summernote">Deskripsi</label>
-											<textarea required id="summernote" name="deskripsi">
+											<textarea required class="summernote" name="deskripsi">
 											</textarea>
 											
 										</div>

@@ -1,5 +1,5 @@
 <?php 
-$sidebar = 'Tambah Tenaga Kerja';
+$sidebar = 'Buat Tenaga Kerja';
 include('../../core/init.php');
 include_once('../template/header.php');
 

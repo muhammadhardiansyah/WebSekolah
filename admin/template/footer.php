@@ -26,7 +26,7 @@
 	<script>
 		$(function () {
 		// Summernote
-		$('#summernote').summernote({
+		$('.summernote').summernote({
 			height: 300,
 			focus: true,
 			toolbar: [
