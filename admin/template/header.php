@@ -83,7 +83,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li> 
 			<li class="nav-item">
 				<a href="../home/edit.php" class="nav-link <?= $sidebar == "Home" ? 'active' : '' ?>">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<i class="nav-icon far fa-address-card"></i>
 					<p>
 						Home
 					</p>
@@ -91,7 +91,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li> 
 			<li class="nav-item">
 				<a href="../slider/" class="nav-link <?= $sidebar == "slider" ? 'active' : '' ?>">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<i class="nav-icon fas fa-images"></i>
 					<p>
 						Slider
 					</p>
@@ -99,7 +99,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li>
 			<li class="nav-item">
 				<a href="../visi-misi/edit.php" class="nav-link <?= $sidebar == "Visi Misi" ? 'active' : '' ?>">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<i class="nav-icon fas fa-balance-scale"></i>
 					<p>
 						Visi dan Misi
 					</p>
@@ -107,7 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li> 
 			<li class="nav-item has-treeview <?= strpos($sidebar, "Guru") !== false ? 'menu-open' : '' ?>">
 				<a href="#" class="nav-link <?= strpos($sidebar, "Guru") !== false ? 'active' : '' ?>">
-					<i class="nav-icon fa fa-envelope"></i>
+					<i class="nav-icon fas fa-users"></i>
 					<p>
 						Guru
 						<i class="right fas fa-angle-left"></i>
@@ -131,7 +131,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li>
 			<li class="nav-item has-treeview <?= strpos($sidebar, "Tenaga Kerja") !== false ? 'menu-open' : '' ?>">
 				<a href="#" class="nav-link <?= strpos($sidebar, "Tenaga Kerja") !== false ? 'active' : '' ?>">
-					<i class="nav-icon fa fa-envelope"></i>
+					<i class="nav-icon fas fa-users"></i>
 					<p>
 						Tenaga Kerja
 						<i class="right fas fa-angle-left"></i>
@@ -179,7 +179,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			</li>
 			<li class="nav-item">
 				<a href="../contact/edit.php" class="nav-link <?= $sidebar == "Edit Contact" ? 'active' : '' ?>">
-					<i class="nav-icon fas fa-tachometer-alt"></i>
+					<i class="nav-icon fas fa-map-marker-alt"></i>
 					<p>
 						Contact
 					</p>

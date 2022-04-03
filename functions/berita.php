@@ -19,4 +19,9 @@
 		$query = "SELECT * FROM berita WHERE id_berita = $id_berita";
 		return result($query);
 	}
+
+	function get_kategori() {
+		$query = "SELECT * FROM berita GROUP BY kategori";
+		return result($query);
+	}
 	
