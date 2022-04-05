@@ -1,5 +1,4 @@
 <?php 
-	
 	session_start();
 
 	require_once "../../functions/db.php";
@@ -13,5 +12,6 @@
 	require_once "../../functions/galeri.php";
 	require_once "../../functions/berita.php";
 	require_once "../../functions/contact.php";
+	require_once "../../functions/gallery.php";
 	
  ?>

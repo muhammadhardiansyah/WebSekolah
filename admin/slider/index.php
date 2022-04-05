@@ -59,7 +59,7 @@ include_once('../template/header.php');
                                         <td class="font-weight-bold"><?= $item['urutan'] ?></td>
                                         <td><?= $item['judul']; ?></td>
                                         <td><?= $item['deskripsi'];?></td>
-                                        <td><?= $item['gambar'];?></td>
+                                        <td><img height="200px" src="../../view/upload/<?= $item['gambar'];?>" alt=""></td>
                                         <?php echo "
                                         <td>
                                             <a href='edit.php?id_slider=$item[id_slider]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>

@@ -32,7 +32,7 @@ include_once('../template/header.php');
 if(isset($_POST['tambah'])){
     $nama = $_POST['nama'];
     $jabatan = $_POST ['jabatan'];
-    // $gambar = $_POST['gambar'];
+    $gambar = gambar();
     $add = add_guru($nama,$jabatan,$gambar);
     echo "
     <br>

@@ -31,10 +31,9 @@ include_once('../template/header.php');
 if(isset($_POST['tambah'])){
     $judul = $_POST['judul'];
     $deskripsi = $_POST ['deskripsi'];
-    // $gambar = $_POST['gambar'];
+    $gambar = gambar();
     $kategori = $_POST['kategori'];
     $penulis = $_POST['penulis'];
-
     $add = add_berita($judul, $deskripsi, $gambar, $kategori,$penulis);
     echo "
     <br>

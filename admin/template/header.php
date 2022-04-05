@@ -98,6 +98,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li>
 			<li class="nav-item">
+				<a href="../gallery/" class="nav-link <?= $sidebar == "gallery" ? 'active' : '' ?>">
+					<i class="nav-icon fas fa-images"></i>
+					<p>
+						Gallery
+					</p>
+				</a>
+			</li>
+			<li class="nav-item">
 				<a href="../visi-misi/edit.php" class="nav-link <?= $sidebar == "Visi Misi" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-balance-scale"></i>
 					<p>

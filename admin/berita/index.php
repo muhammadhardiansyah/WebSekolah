@@ -63,7 +63,7 @@ $berita = get_berita();
                                         <td class="font-weight-bold"><?= $i ?></td>
                                         <td><?= $item['judul']; ?></td>
                                         <td><?= $item['deskripsi'];?></td>
-                                        <td><?= $item['gambar'];?></td>
+                                        <td><img height="200px" src="../../view/upload/<?= $item['gambar'];?>" alt=""></td>
                                         <td><?= $item['kategori'];?></td>
                                         <td><?= $item['penulis'];?></td>
                                         <td>

@@ -62,12 +62,11 @@ include_once('../template/header.php');
                                         <td class="font-weight-bold"><?= $i ?></td>
                                         <td><?= $item['nama']; ?></td>
                                         <td><?= $item['tenaga_kerja'];?></td>
-                                        <td><img src="../..<?= $item['gambar'];?>" width="100" alt=""></td>
-                                        <?php echo "
+                                        <td><img height="200px" src="../../view/upload/<?= $item['gambar'];?>" alt=""></td>
                                         <td>
-                                            <a href='edit.php?id_tenaga_kerja=$item[id_tenaga_kerja]'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
-                                            <a href='delete.php?id_tenaga_kerja=$item[id_tenaga_kerja]'><button type='button' class='btn btn-sm btn-danger my-1' onclick="."return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"."><i class='fa fa-trash'></i></button></a>
-                                        </td>"; ?>
+                                            <a href='edit.php?id_tenaga_kerja=<?= $item['id_tenaga_kerja']; ?>'><button type='button' class='btn btn-sm btn-info my-1'><i class='fa fa-pen'></i></button></a>
+                                            <a href='delete.php?id_tenaga_kerja=<?= $item['id_tenaga_kerja']; ?>'><button type='button' class='btn btn-sm btn-danger my-1' onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')"><i class='fa fa-trash'></i></button></a>
+                                        </td>
                                     </tr>
                                     <?php 
                                         $i += 1;

@@ -136,9 +136,9 @@ if (isset($_POST['username']) AND ($_POST['password'])){
                     <div class="mt-3 inputbox"> <input type="text" class="form-control" name="username" placeholder="Username" required> <i class="fa fa-user"></i> </div>
                     <div class="inputbox"> <input type="password" class="form-control" name="password" placeholder="Password" required> <i class="fa fa-lock"></i> </div>
                 </div>
-                <div class="d-flex justify-content-between">
+                <!-- <div class="d-flex justify-content-between">
                     <div class="form-check"> <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <label class="form-check-label" for="flexCheckDefault"> Keep me Logged in </label> </div>
-                </div>
+                </div> -->
                 <div class="mt-2"> <button class="btn btn-primary btn-block">Log In</button> </div>
                 <?php 
                 if(isset($_GET['failed'])){ ?>

@@ -34,20 +34,14 @@ if (isset($_POST['update'])){
     $id_guru = $_POST['id_guru'];
     $nama = $_POST["nama"];
     $jabatan = $_POST["jabatan"];
-    // $gambar = $_POST["gambar"];
-    // echo "$id_berita,$judul,$deskripsi,$kategori,$penulis";
-    //update data
+    $gambar = escape(data:$_POST['gambar_old']);
+    if(!empty($_FILES['gambar']['tmp_name'])){
+        $gambar = gambar();
+    }
     $result = update_guru($nama,$jabatan,$gambar,$id_guru);
-    
-    echo "
-    <script type='text/javascript'>location.href = 'index.php?success=Data Guru Berhasil di Update';</script>
-    ";
-//     // echo "$judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita";
-    
+    echo "<script type='text/javascript'>location.href = 'index.php?success=Data Guru Berhasil di Update';</script>";  
 }
-?>
 
-<?php
 //check apakah ada method GET
 if(isset($_GET['id_guru'])){
     //Mengambil ID dan menampilkan data berdasarkan ID
@@ -105,7 +99,8 @@ while ($item = mysqli_fetch_array($query)){
 
 										<div class="form-group col-md-12 mb-4">
 											<label for="kategori">Gambar</label><br>
-											<input type="file" name="gambar" id="gambar" value="<?= $gambar; ?>">
+                                            <input type="hidden" name="gambar_old" value="<?= $gambar; ?>">
+											<input type="file" name="gambar" id="gambar">
 										</div>
                                         <div class="form-group col-md-12">
                                             <button type="submit" name="update" class="btn btn-primary form-control"><i class="fa fa-save mr-1"></i> Update Data</button>

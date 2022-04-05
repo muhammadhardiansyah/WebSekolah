@@ -37,7 +37,10 @@ if (isset($_POST['update'])){
     $urutan = $_POST['urutan'];
     $judul = $_POST['judul'];
     $deskripsi = $_POST["deskripsi"];
-    // $gambar = $_POST['gambar'];
+    $gambar = escape(data:$_POST['gambar_old']);
+    if(!empty($_FILES['gambar']['tmp_name'])){
+        $gambar = gambar();
+    }
     $result = update_slider($urutan ,$judul, $deskripsi, $gambar, $id_slider);
     echo "
     <script type='text/javascript'>location.href = 'index.php?success=Slider berhasil di Update';</script>
@@ -100,7 +103,8 @@ while ($item = mysqli_fetch_array($query)){
 
                                         <div class="form-group col-md-12 mb-4">
 											<label for="kategori">Gambar</label><br>
-											<input type="file" name="gambar" id="gambar" value="<?= $gambar; ?>">
+                                            <input type="hidden" name="gambar_old" value="<?= $gambar; ?>">
+											<input type="file" name="gambar" id="gambar">
 										</div>
 
                                         <input type="hidden" id="id_slider" name="id_slider" value="<?= $id_slider ?>">

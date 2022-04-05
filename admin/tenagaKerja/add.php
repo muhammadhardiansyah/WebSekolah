@@ -32,7 +32,7 @@ include_once('../template/header.php');
 if(isset($_POST['tambah'])){
     $nama = $_POST['nama'];
     $id_tenaga = $_POST ['id_tenaga'];
-    // $gambar = $_POST['gambar'];
+    $gambar = gambar();
     $add = add_tenaga_kerja($nama,$id_tenaga,$gambar);
     echo "
     <br>

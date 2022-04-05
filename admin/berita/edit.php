@@ -36,20 +36,17 @@ if (isset($_POST['update'])){
     $id_berita = $_POST['id_berita'];
     $judul = $_POST["judul"];
     $deskripsi = $_POST["deskripsi"];
-    // $gambar = $_POST["gambar"];
+    $gambar = escape(data:$_POST['gambar_old']);
+    if(!empty($_FILES['gambar']['tmp_name'])){
+        $gambar = gambar();
+    }
+    // gambar();
     $kategori = $_POST["kategori"];
-    $penulis = $_POST['penulis']; 
-    
+    $penulis = $_POST['penulis'];   
     $result = edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita);
-    
-    // echo "
-    // <script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>
-    // ";
+    echo "<script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>";
     
 }
-?>
-
-<?php
 //check apakah ada method GET
 if(isset($_GET['id_berita'])){
     //Mengambil ID dan menampilkan data berdasarkan ID
@@ -57,9 +54,7 @@ if(isset($_GET['id_berita'])){
 }
 else{
     //redirect kembali ke halaman utama
-    // echo "
-    // <script type='text/javascript'>location.href = 'index.php';</script>
-    // ";
+    echo "<script type='text/javascript'>location.href = 'index.php';</script>";
 }
 
 //fetch user data
@@ -99,7 +94,8 @@ while ($item = mysqli_fetch_array($query)){
 
 										<div class="form-group col-md-12 mb-4">
 											<label for="kategori">Gambar</label><br>
-											<input type="file" name="gambar" id="gambar" value="<?= $gambar; ?>">
+                                            <input type="hidden" name="gambar_old" value="<?= $gambar; ?>">
+											<input type="file" name="gambar">
 										</div>
 
                                         <div class="form-group col-md-12">

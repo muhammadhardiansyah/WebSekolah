@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Apr 2022 pada 06.51
+-- Waktu pembuatan: 05 Apr 2022 pada 18.41
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -41,8 +41,14 @@ CREATE TABLE `berita` (
 --
 
 INSERT INTO `berita` (`id_berita`, `judul`, `deskripsi`, `gambar`, `kategori`, `penulis`) VALUES
-(29, 'Permohonan Validasi KRS', '                                                                                                                                                                                                                                                                                                                                                                                                                                                                Permohonan Validasi KRS', '', 'Berita', 'Supri'),
-(34, 'Permohonan Validasi KRS 123456', 'Permohonan Validasi KRS 123456											', '', 'Berita', 'daisuki');
+(29, 'Orientation Programme For New Students', '                                                &nbsp;Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.', 'latest-new-img_1649047515.jpg', 'Berita Sekolah', 'Admin'),
+(34, 'Orientation Programme For New Students.', 'Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.', 'latest-new-img_1649047542.jpg', 'Berita Sekolah', 'Admin'),
+(35, 'Orientation Programme For New Students.', 'Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.', 'latest-new-img_1649047571.jpg', 'Berita Sekolah', 'Admin'),
+(36, 'Orientation Programme For New Students.', 'Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.', 'latest-new-img_1649047589.jpg', 'Berita Sekolah', 'Admin'),
+(38, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja', '                                                                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                                                                        ', 'gallery-img3_1649047785.jpg', 'Berita Sekolah', 'Admin'),
+(39, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img2_1649047671.jpg', 'Berita Sekolah', 'Admin'),
+(40, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img3_1649047702.jpg', 'Berita Sekolah', 'Admin'),
+(41, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img3_1649047713.jpg', 'Berita Sekolah', 'Admin');
 
 -- --------------------------------------------------------
 
@@ -63,7 +69,37 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`id_contact`, `deskripsi`, `nomor`, `email`, `gmaps`) VALUES
-(6, '                                                                                                                                                <p style=\"box-sizing: inherit; outline: none; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: rgb(64, 64, 64); font-family: Raleway, sans-serif;\"><span style=\"font-size: 1rem;\">JL. Balai Desa, Desa Kedungwuluh Lor </span><span style=\"font-size: 1rem;\">Patikraja, Clibur, Kec,Banyumas, </span><span style=\"font-size: 1rem;\">Kab.Banyumas, Jawa Tengah 53171</span></p><p style=\"box-sizing: inherit; outline: none; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: rgb(64, 64, 64); font-family: Raleway, sans-serif;\"><span style=\"font-size: 1rem;\">                                            </span></p>                                                                                        ', '(0281) 6574601', 'smpn2patikraja@gmail.com', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9821591647383!2d109.20853791530527!3d-7.467221175683686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655d8dbfdd3a37%3A0xad34d9ded11bd022!2sSMP%20N%202%20Patikraja!5e0!3m2!1sid!2sid!4v1646690082010!5m2!1sid!2sid');
+(6, '                                                                                                                                                                                                                                                                                                                                                <p style=\"box-sizing: inherit; outline: none; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: rgb(64, 64, 64); font-family: Raleway, sans-serif;\"><span style=\"font-size: 1rem;\">JL. Balai Desa, Desa Kedungwuluh&nbsp;</span><span style=\"font-size: 1rem;\">Lor&nbsp;</span><span style=\"font-size: 1rem;\">Patikraja, Clibur, Kec,Banyumas,&nbsp;</span><span style=\"font-size: 1rem;\">Kab.Banyumas, Jawa Tengah 53171</span></p><p style=\"box-sizing: inherit; outline: none; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; color: rgb(64, 64, 64); font-family: Raleway, sans-serif;\"><span style=\"font-size: 1rem;\">                                            </span></p>                                                                                                                                                                                                                                                                        ', '(0281) 6574601', 'smpn2patikraja@gmail.com', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.9821591647383!2d109.20853791530527!3d-7.467221175683686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e655d8dbfdd3a37%3A0xad34d9ded11bd022!2sSMP%20N%202%20Patikraja!5e0!3m2!1sid!2sid!4v1646690082010!5m2!1sid!2sid');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id_gallery` int(11) NOT NULL,
+  `gambar` varchar(255) DEFAULT NULL,
+  `kategori` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `gallery`
+--
+
+INSERT INTO `gallery` (`id_gallery`, `gambar`, `kategori`) VALUES
+(1, 'gallery-img1_1649044802.jpg', 'Extravaganza'),
+(2, 'gallery-img3_1649044879.jpg', 'Extravaganza'),
+(3, 'gallery-img4_1649044904.jpg', 'Extravaganza'),
+(4, 'gallery-img2_1649044990.jpg', '17 Agustus'),
+(5, 'gallery-img9_1649045005.jpg', '17 Agustus'),
+(6, 'gallery-img10_1649045018.jpg', '17 Agustus'),
+(7, 'gallery-img5_1649045048.jpg', 'Ulang Tahun'),
+(8, 'gallery-img6_1649045061.jpg', 'Ulang Tahun'),
+(9, 'gallery-img8_1649045073.jpg', 'Osis'),
+(10, 'gallery-img11_1649045095.jpg', 'Osis'),
+(11, 'gallery-img12_1649045108.jpg', 'Osis'),
+(12, 'gallery-img7_1649045133.jpg', 'Osis');
 
 -- --------------------------------------------------------
 
@@ -83,8 +119,15 @@ CREATE TABLE `guru` (
 --
 
 INSERT INTO `guru` (`id_guru`, `nama`, `id_jabatan`, `gambar`) VALUES
-(9, 'Supriyat', 1, ''),
-(11, 'Isyana Saraswati', 1, '');
+(13, '', 0, 'course3-img_1649045586.jpg'),
+(14, 'Bibek Basnet', 4, 'developer-img_1649046057.jpg'),
+(15, 'Bibek Basnet', 4, 'developer-img_1649046067.jpg'),
+(16, 'Bibek Basnet', 4, 'developer-img_1649046082.jpg'),
+(17, 'Bibek Basnet', 4, 'developer-img_1649046090.jpg'),
+(18, 'Bibek Basnet', 4, 'developer-img_1649046097.jpg'),
+(19, 'Bibek Basnet', 4, 'developer-img_1649046105.jpg'),
+(20, 'Bibek Basnet', 4, 'developer-img_1649046117.jpg'),
+(21, 'Bibek Basnet', 4, 'developer-img_1649046126.jpg');
 
 -- --------------------------------------------------------
 
@@ -167,10 +210,9 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id_slider`, `urutan`, `judul`, `deskripsi`, `gambar`) VALUES
-('1', 1, 'SMP NEGERI 2 PATIKRAJA', '                                                                                                Sekolah Berwawasan Budi Pekerti', ''),
-('2', 2, 'SMP NEGERI 2 PATIKRAJA', 'Sekolah Berwawasan Budi Pekerti', ''),
-('3', 3, 'SMP NEGERI 2 PATIKRAJA', '                                                                                                Sekolah Berwawasan Budi Pekerti', ''),
-('4', 4, 'SMP NEGERI 2 PATIKRAJA', 'Sekolah Berwawasan Budi Pekerti', '');
+('1', 1, 'SMP NEGERI 2 PATIKRAJA', '                                                                                                                                                                                            \r\nSekolah Berwawasan Budi Pekerti                                                                                        ', 'DSC_0730_1649046447.jpg'),
+('2', 2, 'SMP NEGERI 2 PATIKRAJA', '                                                Sekolah Berwawasan Budi Pekerti                                            ', 'DSC_0910.JPG_1649046602.jpg'),
+('3', 3, 'SMP NEGERI 2 PATIKRAJA', '                                                                                                                                                Sekolah Berwawasan Budi Pekerti                                            ', 'DSC_1009_1649046609.jpg');
 
 -- --------------------------------------------------------
 
@@ -190,7 +232,14 @@ CREATE TABLE `tenaga_kerja` (
 --
 
 INSERT INTO `tenaga_kerja` (`id_tenaga_kerja`, `nama`, `id_tenaga`, `gambar`) VALUES
-(9, 'Isyana Saras', 2, '');
+(13, 'Bibek Basnet', 2, 'developer-img_1649046181.jpg'),
+(14, 'Bibek Basnet', 2, 'developer-img_1649046187.jpg'),
+(15, 'Bibek Basnet', 2, 'developer-img_1649046196.jpg'),
+(16, 'Bibek Basnet', 2, 'developer-img_1649046204.jpg'),
+(17, 'Bibek Basnet', 2, 'developer-img_1649046210.jpg'),
+(18, 'Bibek Basnet', 2, 'developer-img_1649046217.jpg'),
+(19, 'Bibek Basnet', 2, 'developer-img_1649046224.jpg'),
+(20, 'Bibek Basnet', 2, 'developer-img_1649046229.jpg');
 
 -- --------------------------------------------------------
 
@@ -228,7 +277,7 @@ CREATE TABLE `visi_misi` (
 --
 
 INSERT INTO `visi_misi` (`id_visi_misi`, `visi`, `misi`) VALUES
-(1, '                                                                                                                                                                                                                                                                                                <div>Visi Sekolah</div><div>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur                                                                                        ', '                                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidents                                            ');
+(1, '                                                                                                                                                                                                                                                                                                                                                                                                                                                <div><span style=\"color: rgb(100, 100, 100); font-family: Raleway, sans-serif;\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span><br></div>                                                                                        ', '                                                                                                                                                                                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proidents                                                                                                                                                                                ');
 
 --
 -- Indexes for dumped tables
@@ -245,6 +294,12 @@ ALTER TABLE `berita`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id_contact`);
+
+--
+-- Indeks untuk tabel `gallery`
+--
+ALTER TABLE `gallery`
+  ADD PRIMARY KEY (`id_gallery`);
 
 --
 -- Indeks untuk tabel `guru`
@@ -302,7 +357,7 @@ ALTER TABLE `visi_misi`
 -- AUTO_INCREMENT untuk tabel `berita`
 --
 ALTER TABLE `berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT untuk tabel `contact`
@@ -311,10 +366,16 @@ ALTER TABLE `contact`
   MODIFY `id_contact` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT untuk tabel `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id_gallery` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
 -- AUTO_INCREMENT untuk tabel `guru`
 --
 ALTER TABLE `guru`
-  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_guru` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `home`
@@ -338,7 +399,7 @@ ALTER TABLE `jabatan_tenaga`
 -- AUTO_INCREMENT untuk tabel `tenaga_kerja`
 --
 ALTER TABLE `tenaga_kerja`
-  MODIFY `id_tenaga_kerja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_tenaga_kerja` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`

@@ -20,32 +20,31 @@ function result($query) {
 	}
 }
 
-function uploadImage() {
-	$time 	= time();
-	$nama	= $_FILES['gambar']['name'];
-	$error	= $_FILES['gambar']['error'];
-	$size	= $_FILES['gambar']['size'];
-	$asal	= $_FILES['gambar']['tmp_name'];
-	$namafile = '/view/upload/'. $nama;
-	$format = $_FILES['gambar']['type'];
-	if($error == 0){
-		if($size < 10000000){
-			if($format == 'image/jpeg'){
-					$namafile = str_replace(".jpg", "", $namafile);
-					$namafile = $namafile. "_". $time . ".jpg";
-					$gmbr = str_replace(".jpg","",$nama);
-					$gambar = $gmbr."_".$time.".jpg";
-					move_uploaded_file($asal, __DIR__ . '/../'. $namafile);
-			}
-			elseif($format == 'image/png'){
-					$namafile = str_replace(".png", "", $namafile);
-					$namafile = $namafile. "_". $time . ".png";
-					$gmbr = str_replace(".png","",$nama);
-					$gambar = $gmbr."_".$time.".png";
-					move_uploaded_file($asal, __DIR__ . '/../' . $namafile);
-			}
-			
-			return $namafile;
-		}
-	}
+function gambar(){
+    if (isset($_FILES['gambar'])){
+        $time 	= time();
+        $nama	= $_FILES['gambar']['name'];
+        $error	= $_FILES['gambar']['error'];
+        $size	= $_FILES['gambar']['size'];
+        $asal	= $_FILES['gambar']['tmp_name'];
+        $namafile = '../../view/upload/'. $nama;
+        $format = $_FILES['gambar']['type'];
+        if ($error == 0){
+            if ($size < 20000000){
+                if ($format == 'image/jpeg'){
+                    $namafileTemp = str_replace(".jpg","",$namafile);
+                    $namafile = $namafileTemp."_".$time.".jpg";
+                    move_uploaded_file($asal, $namafile);
+                    $namaTemp = str_replace(".jpg","",$nama);
+                    return $gambar = $namaTemp."_".$time.".jpg";
+                }elseif($format == 'image/png'){
+                    $namafileTemp = str_replace(".png","",$namafile);
+                    $namafile = $namafileTemp."_".$time.".png";
+                    move_uploaded_file($asal, $namafile);
+                    $namaTemp = str_replace(".png","",$nama);
+                    return $gambar = $namaTemp."_".$time.".png";
+                }
+            } 
+        }
+    }
 }
