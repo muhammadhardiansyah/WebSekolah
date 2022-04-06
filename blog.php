@@ -1,7 +1,10 @@
 <?php
 require ('header.php');
-$berita = get_berita();
-$berita2 = get_berita();
+$perPage = 4;
+$from = isset($_GET['page']) && $_GET['page'] > 1 ? ($_GET['page'] * $perPage) - $perPage : 0;
+$berita = get_berita_paginate($from, $perPage);
+
+$berita2 = get_berita_paginate(0,4);
 $contact = get_contact();
 while ($item = mysqli_fetch_array($contact)){
 	$nomor = $item['nomor'];
@@ -31,14 +34,12 @@ while ($item = mysqli_fetch_array($contact)){
 					</div>
 				<?php } ?>
 					
-				<nav class="navigation pagination">
-					<div class="nav-links">
-						<a href="#" class="page-numbers">Previous</a>
-						<a href="#" class="page-numbers current">1</a>
-						<a href="#" class="page-numbers">2</a>
-						<a href="#" class="page-numbers">3</a>
-						<a href="#" class="page-numbers">Next</a>
-					</div>
+				<nav class="navigation pagination" id="halfpag" >
+						<div class="nav-links">
+						<?php for ($i=1; $i <= get_total_page_berita($perPage); $i++) { ?>
+							<a href="blog.php?page=<?= $i; ?>" class="page-numbers <?= ($_GET['page'] ?? 1) == $i ? 'current' : '' ?>"><?= $i; ?></a>
+						<?php } ?>
+						</div>
 				</nav>
 				</div>
 				<aside>
@@ -65,12 +66,7 @@ while ($item = mysqli_fetch_array($contact)){
 									<p>26 Dec, 2018</p>
 								</div></a>
 							</div>
-						<?php 
-							$i += 1;
-							if($i > 4){
-								break;
-							}
-						} ?>
+						<?php } ?>
 							
 						</div>
 					</div>

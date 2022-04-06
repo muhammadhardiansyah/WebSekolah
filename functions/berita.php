@@ -3,6 +3,14 @@
 		$query = "SELECT * FROM berita";
 		return result($query);
 	}
+	function get_berita_paginate($from, $perPage){
+		$query = "SELECT * FROM berita LIMIT $from, $perPage";
+		return result($query);
+	}
+	function get_total_page_berita($perPage) {
+		$blog_count = mysqli_num_rows(get_berita());
+		return ceil($blog_count / $perPage);
+	}
 	function add_berita($judul,$deskripsi,$gambar,$kategori,$penulis){
 		$query = "INSERT INTO berita (judul, deskripsi, gambar, kategori, penulis) VALUES ('$judul', '$deskripsi', '$gambar', '$kategori','$penulis')";
 		return run($query);
