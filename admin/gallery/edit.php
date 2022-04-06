@@ -34,7 +34,7 @@ include_once('../template/header.php');
 
 if (isset($_POST['update'])){
     $id_gallery = $_POST['id_gallery'];
-    $gambar = escape(data:$_POST['gambar_old']);
+    $gambar = escape($_POST['gambar_old']);
     if(!empty($_FILES['gambar']['tmp_name'])){
         $gambar = gambar();
     }

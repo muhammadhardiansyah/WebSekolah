@@ -49,7 +49,7 @@ $gallery = get_gallery();
 						</div>
 						<div class="news-detail" itemprop="description">
 							<a href=""><h1><?= $item['judul'] ?></h1></a>
-							<h2 itemprop="startDate">By <?= $item['penulis'] ?> | 20 Dec. 2018</h2>
+							<h2 itemprop="startDate">By <?= $item['penulis'] ?> | <?= $item['created_at'] ?></h2>
 
 							<p><?= $item['deskripsi'] ?></p>
 						</div>

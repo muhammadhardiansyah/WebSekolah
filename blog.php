@@ -26,7 +26,7 @@ while ($item = mysqli_fetch_array($contact)){
 							<img src="view/upload/<?= $item['gambar'] ?>" alt="travel images">
 						</div>
 						<div class="grid-body">
-							<h4 itemprop="date">December 10, 2018 | <?= $item['penulis'] ?> | 0 Comments</h4>
+							<h4 itemprop="date"><?= $item['created_at'] ?> | <?= $item['penulis'] ?> | 0 Comments</h4>
 							<h1 itemprop="name"><?= $item['judul'] ?></h1>
 							<p itemprop="description"><?= $item['deskripsi'] ?></p>
 							<a href="blog-edu-single.php?id_berita=<?= $item['id_berita'] ?>">read more <i class="fas fa-long-arrow-alt-right"></i></a>

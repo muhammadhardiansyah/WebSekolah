@@ -37,7 +37,7 @@ if (isset($_POST['username']) AND ($_POST['password'])){
     <link rel="stylesheet" href="../view/admin/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../view/admin/css/adminlte.min.css">
-    <title>Document</title>
+    <title>Admin</title>
     <style>
     body {
         background-color: #eee;

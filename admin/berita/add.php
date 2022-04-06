@@ -29,12 +29,15 @@ include_once('../template/header.php');
         <div class="container-fluid">
 <?php
 if(isset($_POST['tambah'])){
+    $date = new DateTime('now',new DateTimeZone('Asia/Jakarta'));
+    $now = $date ->format('Y-m-d');
     $judul = $_POST['judul'];
     $deskripsi = $_POST ['deskripsi'];
     $gambar = gambar();
     $kategori = $_POST['kategori'];
     $penulis = $_POST['penulis'];
-    $add = add_berita($judul, $deskripsi, $gambar, $kategori,$penulis);
+    $created_at = $now;
+    $add = add_berita($judul, $deskripsi, $gambar, $kategori,$penulis,$created_at);
     echo "
     <br>
     <div class='alert alert-success alert-dismissible'>

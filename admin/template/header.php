@@ -5,6 +5,10 @@ if(!isset($_SESSION)){
 if (!isset($_SESSION['id_user'])){
     echo "<script type='text/javascript'>location.href = '../';</script>";
 }
+$logo = result('SELECT * FROM logo;');
+while ($item = mysqli_fetch_array($logo)){
+	$gambarLogo = $item['gambar'];
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -17,7 +21,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | Starter</title>
+  <title>Admin</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../view/admin/plugins/fontawesome-free/css/all.min.css">
@@ -50,9 +54,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="../../view/admin/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="../../view/upload/<?= $gambarLogo ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">SMPN 2 Patikraja</span>
     </a>
 
     <!-- Sidebar -->

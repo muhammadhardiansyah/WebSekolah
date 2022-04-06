@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Apr 2022 pada 18.41
+-- Waktu pembuatan: 06 Apr 2022 pada 17.05
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -33,22 +33,23 @@ CREATE TABLE `berita` (
   `deskripsi` text DEFAULT NULL,
   `gambar` varchar(255) DEFAULT NULL,
   `kategori` varchar(100) DEFAULT NULL,
-  `penulis` varchar(255) DEFAULT NULL
+  `penulis` varchar(255) DEFAULT NULL,
+  `created_at` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `berita`
 --
 
-INSERT INTO `berita` (`id_berita`, `judul`, `deskripsi`, `gambar`, `kategori`, `penulis`) VALUES
-(29, 'Orientation Programme For New Students', '                                                &nbsp;Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.', 'latest-new-img_1649047515.jpg', 'Berita Sekolah', 'Admin'),
-(34, 'Orientation Programme For New Students.', 'Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.', 'latest-new-img_1649047542.jpg', 'Berita Sekolah', 'Admin'),
-(35, 'Orientation Programme For New Students.', 'Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.', 'latest-new-img_1649047571.jpg', 'Berita Sekolah', 'Admin'),
-(36, 'Orientation Programme For New Students.', 'Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.', 'latest-new-img_1649047589.jpg', 'Berita Sekolah', 'Admin'),
-(38, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja', '                                                                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                                                                        ', 'gallery-img3_1649047785.jpg', 'Berita Sekolah', 'Admin'),
-(39, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img2_1649047671.jpg', 'Berita Sekolah', 'Admin'),
-(40, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img3_1649047702.jpg', 'Berita Sekolah', 'Admin'),
-(41, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;Perayaan Ulang Tahun SMP Negeri 2 Patikraja.&nbsp;											', 'gallery-img3_1649047713.jpg', 'Berita Sekolah', 'Admin');
+INSERT INTO `berita` (`id_berita`, `judul`, `deskripsi`, `gambar`, `kategori`, `penulis`, `created_at`) VALUES
+(29, 'Orientation Programme For New Students', '                                                                                                                                                 Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.                                                                                        ', 'latest-new-img_1649047515.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(34, 'Orientation Programme For New Students.', '                                                Orientation Programme For New Students. Orientation Programme For New Students. Orientation Programme For New Students.                                            ', 'latest-new-img_1649047542.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(35, 'Orientation Programme For New Students.', '                                                Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.                                            ', 'latest-new-img_1649047571.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(36, 'Orientation Programme For New Students.', '                                                Orientation Programme For New Students.Orientation Programme For New Students.Orientation Programme For New Students.                                            ', 'latest-new-img_1649047589.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(38, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja', '                                                                                                                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                                                                                                                    ', 'gallery-img3_1649047785.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(39, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', '                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                            ', 'gallery-img2_1649047671.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(40, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', '                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                            ', 'gallery-img3_1649047702.jpg', 'Berita Sekolah', 'Admin', '2022-04-06'),
+(41, 'Perayaan Ulang Tahun SMP Negeri 2 Patikraja. ', '                                                Perayaan Ulang Tahun SMP Negeri 2 Patikraja. Perayaan Ulang Tahun SMP Negeri 2 Patikraja. 											                                            ', 'gallery-img3_1649047713.jpg', 'Berita Sekolah', 'Admin', '2022-04-06');
 
 -- --------------------------------------------------------
 
@@ -190,6 +191,23 @@ INSERT INTO `jabatan_tenaga` (`id_tenaga`, `tenaga_kerja`) VALUES
 (3, 'Penjaga Lab'),
 (4, 'Satpam'),
 (5, 'Petugas Kebersihan');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `logo`
+--
+
+CREATE TABLE `logo` (
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `logo`
+--
+
+INSERT INTO `logo` (`gambar`) VALUES
+('site-logo.jpg');
 
 -- --------------------------------------------------------
 

@@ -15,6 +15,7 @@ while ($item = mysqli_fetch_array($show_berita)){
 	$penulis 	= $item['penulis'];
 	$kategori 	= $item['kategori'];
 	$deskripsi 	= $item['deskripsi'];
+	$created_at = $item['created_at'];
 }
 $get_berita = get_berita();
 
@@ -121,7 +122,7 @@ $get_berita = get_berita();
 									</div>
 									<a href="blog-edu-single.php?id_berita=<?= $item['id_berita'] ?>"><div class="post-content">
 										<h3><?= $item['judul'] ?></h3>
-										<p>26 Dec, 2018</p>
+										<p><?= $item['created_at'] ?></p>
 									</div></a>
 								</div>
 							<?php 

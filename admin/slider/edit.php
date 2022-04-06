@@ -37,7 +37,7 @@ if (isset($_POST['update'])){
     $urutan = $_POST['urutan'];
     $judul = $_POST['judul'];
     $deskripsi = $_POST["deskripsi"];
-    $gambar = escape(data:$_POST['gambar_old']);
+    $gambar = escape($_POST['gambar_old']);
     if(!empty($_FILES['gambar']['tmp_name'])){
         $gambar = gambar();
     }

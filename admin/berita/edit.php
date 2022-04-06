@@ -33,17 +33,19 @@ include_once('../template/header.php');
 <?php
 
 if (isset($_POST['update'])){
+    $date = new DateTime('now',new DateTimeZone('Asia/Jakarta'));
+    $now = $date ->format('Y-m-d');
     $id_berita = $_POST['id_berita'];
     $judul = $_POST["judul"];
     $deskripsi = $_POST["deskripsi"];
-    $gambar = escape(data:$_POST['gambar_old']);
+    $gambar = escape($_POST['gambar_old']);
     if(!empty($_FILES['gambar']['tmp_name'])){
         $gambar = gambar();
     }
-    // gambar();
     $kategori = $_POST["kategori"];
     $penulis = $_POST['penulis'];   
-    $result = edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$id_berita);
+    $created_at = $now;
+    $result = edit_Berita($judul,$deskripsi,$gambar,$kategori,$penulis,$created_at,$id_berita);
     echo "<script type='text/javascript'>location.href = 'index.php?success=Berita Berhasil di Update';</script>";
     
 }

@@ -1,5 +1,9 @@
 <?php
 require_once 'core/initLanding.php';
+$logo = result('SELECT * FROM logo;');
+while ($item = mysqli_fetch_array($logo)){
+	$gambarLogo = $item['gambar'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -55,7 +59,7 @@ require_once 'core/initLanding.php';
 			<div class="main-header">
 				<div class="container">
 					<div class="logo-wrap" itemprop="logo">
-						<img src="view/images/site-logo.jpg" alt="Logo Image">
+						<img src="view/upload/<?= $gambarLogo ?>" alt="Logo Image">
 						<!-- <h1>Education</h1> -->
 					</div>
 					<div class="nav-wrap">
