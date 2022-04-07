@@ -9,9 +9,10 @@ while ($item = mysqli_fetch_array($logo)){
 <!DOCTYPE html>
 <html>
 <head>
-	<title>education</title>
+	<title>SMPN 2 Patikraja</title>
 	<meta name="viewport" content="width=device-width">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="view/admin/css/adminlte.min.css">
 	<link rel="stylesheet" type="text/css" href="view/css/all.css">
 	<link rel="stylesheet" type="text/css" href="view/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="view/css/lightbox.css">
@@ -50,7 +51,7 @@ while ($item = mysqli_fetch_array($logo)){
 							</ul>
 						</div>
 						<div class="login-block">
-							<a href="admin/">Login</a>
+							<button class="btn btn-primary"><h4><a href="admin/">Login</a></h4></button>
 						</div>
 					</div>
 				</div>

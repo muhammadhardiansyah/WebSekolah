@@ -67,5 +67,6 @@ while ($item = mysqli_fetch_array($kontak)){
 	<script type="text/javascript" src="view/js/jquery.flexslider.js"></script>
 	<script type="text/javascript" src="view/js/jquery.rateyo.js"></script>
 	<script type="text/javascript" src="view/js/custom.js"></script>
+	<script src="view/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

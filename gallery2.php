@@ -30,7 +30,7 @@ $gallery = get_gallery();
 				</div>
 			</div>
 				<section class="gallery-images-section gallery2" id="cGrid">
-					
+
 					<?php while($item = mysqli_fetch_array($gallery)){ ?>
 					<div class="gallery-img-wrap grid-item <?= $item['kategori'] ?>" >
 						<a href="view/upload/<?= $item['gambar'] ?>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">

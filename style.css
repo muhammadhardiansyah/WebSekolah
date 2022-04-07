@@ -875,7 +875,7 @@ ul > li {
 }
 
 .gallery2 {
-	margin-bottom: 4.0625em;
+	margin: 4.0625em;
 }
 
 /*#gGrid{
@@ -1241,7 +1241,8 @@ ul > li {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(200px, 1fr));
 	grid-gap: 0;
-	width: 100%;
+	/* width: 100%; */
+	width: auto;
 	box-sizing: border-box;
 	box-sizing: content-box;
 	overflow: hidden;
