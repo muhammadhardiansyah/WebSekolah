@@ -876,6 +876,8 @@ ul > li {
 
 .gallery2 {
 	margin: 4.0625em;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 /*#gGrid{
@@ -1241,11 +1243,11 @@ ul > li {
 	display: grid;
 	grid-template-columns: repeat(4, minmax(200px, 1fr));
 	grid-gap: 0;
-	/* width: 100%; */
 	width: auto;
 	box-sizing: border-box;
 	box-sizing: content-box;
 	overflow: hidden;
+	
 }
 
 .gallery-section2 .gallery-images-section {
