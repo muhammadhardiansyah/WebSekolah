@@ -25,6 +25,11 @@ while ($item = mysqli_fetch_array($logo)){
 	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	<style>
+		.gallery-images-section {
+			margin-bottom: 7em;
+		}
+	</style>
 </head>
 <body>
 	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
