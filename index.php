@@ -69,9 +69,9 @@ $gallery = get_gallery();
 				<h2>gallery</h2>
 			</div>
 		</section>
-		<section class="gallery-images-section" itemprop="image" itemscope itemtype=" http://schema.org/ImageGallery">
+		<section class="gallery-images-section gallery2" id="cGrid">
 			<?php while($item = mysqli_fetch_array($gallery)){ ?>
-			<div class="gallery-img-wrap">
+			<div class="gallery-img-wrap grid-item">
 				<a href="view/upload/<?= $item['gambar'] ?>" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 					<img src="view/upload/<?= $item['gambar'] ?>" alt="gallery-images">
 				</a>
