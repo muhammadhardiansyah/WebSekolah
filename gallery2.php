@@ -29,7 +29,7 @@ $gallery = get_gallery();
   					<button class="button" data-filter=".Agustus">17 Agustus</button>
 				</div>
 			</div>
-				<section class="gallery-images-section gallery2" id="cGrid">
+				<section class="gallery-images-section" id="cGrid">
 
 					<?php while($item = mysqli_fetch_array($gallery)){ ?>
 					<div class="gallery-img-wrap grid-item <?= $item['kategori'] ?>" >
