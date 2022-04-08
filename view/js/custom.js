@@ -185,6 +185,7 @@ $('.three').owlCarousel({
 
 // For Isotopes Course Listing && Gallery 2
 var $grid = $('#cGrid').isotope({
+  percentPosition: true,
   itemSelector: '.grid-item',
   layoutMode: 'fitRows'
 });

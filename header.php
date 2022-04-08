@@ -1,13 +1,14 @@
 <?php
 require_once 'core/initLanding.php';
 $logo = result('SELECT * FROM logo;');
-while ($item = mysqli_fetch_array($logo)){
+while ($item = mysqli_fetch_array($logo)) {
 	$gambarLogo = $item['gambar'];
 }
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>SMPN 2 Patikraja</title>
 	<meta name="viewport" content="width=device-width">
@@ -19,13 +20,37 @@ while ($item = mysqli_fetch_array($logo)){
 	<link rel="stylesheet" type="text/css" href="view/css/flexslider.css">
 	<link rel="stylesheet" type="text/css" href="view/css/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="view/css/owl.theme.default.css">
-	<link rel="stylesheet" type="text/css" href="view/css/jquery.rateyo.css"/>
+	<link rel="stylesheet" type="text/css" href="view/css/jquery.rateyo.css" />
 	<link rel="stylesheet" type="text/css" href="view/css/jquery.mmenu.all.css" />
 	<link rel="stylesheet" type="text/css" href="view/css/meanmenu.min.css">
 	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	<style>
+		.grid-sizer,
+		.grid-item {
+			width: 24% !important;
+			box-sizing: border-box !important;
+		}
+
+		@media screen and (max-width: 1000px) {
+
+			.grid-sizer,
+			.grid-item {
+				width: 33% !important;
+			}
+		}
+
+		@media screen and (max-width: 770px) {
+
+			.grid-sizer,
+			.grid-item {
+				width: 100% !important;
+			}
+		}
+	</style>
 </head>
+
 <body>
 	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
 		<header class="site-header">
@@ -51,7 +76,9 @@ while ($item = mysqli_fetch_array($logo)){
 							</ul>
 						</div>
 						<div class="login-block">
-							<button class="btn btn-primary"><h4><a href="admin/">Login</a></h4></button>
+							<button class="btn btn-primary">
+								<h4><a href="admin/">Login</a></h4>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -89,4 +116,3 @@ while ($item = mysqli_fetch_array($logo)){
 				</div>
 			</div>
 		</header>
-		
