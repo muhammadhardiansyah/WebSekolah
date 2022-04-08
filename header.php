@@ -29,7 +29,7 @@ while ($item = mysqli_fetch_array($logo)) {
 	<style>
 		.grid-sizer,
 		.grid-item {
-			width: 24% !important;
+			width: 24.99% !important;
 			box-sizing: border-box !important;
 		}
 
@@ -47,6 +47,9 @@ while ($item = mysqli_fetch_array($logo)) {
 			.grid-item {
 				width: 100% !important;
 			}
+		}
+		.gallery-images-section{
+			margin-bottom: 4.0625em;
 		}
 	</style>
 </head>
