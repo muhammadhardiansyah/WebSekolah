@@ -102,6 +102,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				</a>
 			</li>
 			<li class="nav-item">
+				<a href="../kepsek/" class="nav-link <?= $sidebar == "kepsek" ? 'active' : '' ?>">
+					<i class="nav-icon fas fa-user"></i>
+					<p>
+						Kepsek
+					</p>
+				</a>
+			</li>
+			<li class="nav-item">
 				<a href="../gallery/" class="nav-link <?= $sidebar == "gallery" ? 'active' : '' ?>">
 					<i class="nav-icon fas fa-images"></i>
 					<p>
