@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 06 Apr 2022 pada 17.05
+-- Waktu pembuatan: 11 Apr 2022 pada 17.43
 -- Versi server: 10.4.22-MariaDB
 -- Versi PHP: 8.1.1
 
@@ -195,6 +195,25 @@ INSERT INTO `jabatan_tenaga` (`id_tenaga`, `tenaga_kerja`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `kepsek`
+--
+
+CREATE TABLE `kepsek` (
+  `id_kepsek` int(11) NOT NULL,
+  `nama` varchar(255) DEFAULT NULL,
+  `gambar` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kepsek`
+--
+
+INSERT INTO `kepsek` (`id_kepsek`, `nama`, `gambar`) VALUES
+(1, 'Debby Bisnet', 'customer-img_1649510016.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `logo`
 --
 
@@ -344,6 +363,12 @@ ALTER TABLE `jabatan_tenaga`
   ADD PRIMARY KEY (`id_tenaga`);
 
 --
+-- Indeks untuk tabel `kepsek`
+--
+ALTER TABLE `kepsek`
+  ADD PRIMARY KEY (`id_kepsek`);
+
+--
 -- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
@@ -412,6 +437,12 @@ ALTER TABLE `jabatan`
 --
 ALTER TABLE `jabatan_tenaga`
   MODIFY `id_tenaga` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT untuk tabel `kepsek`
+--
+ALTER TABLE `kepsek`
+  MODIFY `id_kepsek` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tenaga_kerja`
