@@ -5,6 +5,12 @@ $slider2 = get_slider();
 $home = get_home();
 $berita = get_berita();
 $gallery = get_gallery();
+$kepsek = get_kepsek();
+while ($item = mysqli_fetch_array($kepsek)){
+	$gambarKepsek = $item['gambar'];
+	$namaKepsek = $item['nama'];
+}
+
 
 ?>
 	<!-- Header Close -->
@@ -28,7 +34,15 @@ $gallery = get_gallery();
 				<article class="who-we-are">
 				<?php while ($item = mysqli_fetch_array($home)){ ?>
 					<h3 style="text-align: center;" class="top-heading"><?= $item['judul'] ?></h3>
-					<p style="text-align: center;"><?= strip_tags($item['deskripsi'])  ?></p>
+					<div class="float-left" style="text-align: center;">
+						<img src="view/upload/<?= $gambarKepsek ?>" alt="gambar kepsek" class="customer-img" style="width: 200px; margin:5px 40px;">
+						<figcaption style="text-align: center;">
+							<span style="font-size: medium;" itemprop="author"><?= $namaKepsek ?></span>
+						</figcaption>
+					</div>
+					<div class="col-12">
+						<p style=""><?= strip_tags($item['deskripsi'])  ?></p>
+					</div>
 				<?php } ?>
 				</article>
 			</div>
